@@ -517,24 +517,57 @@
         About <span>Me</span>
       </h2>
 
-      <div class="about-content">
+     <div class="about-content">
 
-        <p>
-          I am a dedicated B.Tech Information Technology graduate with strong interest in Software Development, Deep Learning, Data Analytics, and AI-powered applications.
-        </p>
+  <p>
+    B.Tech IT graduate with strong problem-solving skills, hands-on project experience in Deep Learning and Data Analytics, and a passion for learning new technologies.
+  </p>
 
-        <p>
-          Quick learner, adaptable, and passionate about creating impactful digital solutions.
-        </p>
+  <p>
+    Quick learner, adaptable, and ready to contribute from day one. Eager to grow, take challenges, and deliver results — ready to prove why I'm the right hire.
+  </p>
 
-        <br>
+  <br>
 
-        <p>• University College Of Engineering, BIT Campus Tiruchirapalli</p>
-        <p>• Bachelor of Technology Information Technology</p>
-        <p>• CGPA: 8.03</p>
-        <p>• Batch: 2022 – 2026</p>
+  <h3 style="font-size:32px; margin-bottom:25px; color:#0f172a;">
+    Education
+  </h3>
 
-      </div>
+  <hr style="margin-bottom:30px; border:0.5px solid #cbd5e1;">
+
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+
+    <div>
+
+      <p style="font-weight:600; color:#0f172a;">
+        Bachelor of Technology - Information Technology
+      </p>
+
+      <p>
+        University College Of Engineering, BIT Campus,
+      </p>
+
+      <p>
+        Anna University Trichy, Tamil Nadu
+      </p>
+
+    </div>
+
+    <div style="text-align:right;">
+
+      <p style="font-weight:500;">
+        Nov 2022 - May 2026
+      </p>
+
+      <p style="font-weight:600; color:#0f172a;">
+        CGPA: 8.03 / 10
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 
     </div>
 
@@ -581,13 +614,16 @@
         </ul>
       </div>
 
-      <!-- Databases -->
+      <!-- Cloud & Tools -->
 
       <div class="skill-card">
-        <h3>Databases</h3>
+        <h3>Cloud & Tools</h3>
 
         <ul class="skill-list">
-          <li>MySQL</li>
+          <li>AWS</li>
+          <li>Google Colab</li>
+          <li>UiPath</li>
+          <li>GitHub</li>
         </ul>
       </div>
 
@@ -602,16 +638,13 @@
         </ul>
       </div>
 
-      <!-- Cloud & Tools -->
+      <!-- Databases -->
 
       <div class="skill-card">
-        <h3>Cloud & Tools</h3>
+        <h3>Databases</h3>
 
         <ul class="skill-list">
-          <li>AWS</li>
-          <li>Google Colab</li>
-          <li>UiPath</li>
-          <li>GitHub</li>
+          <li>MySQL</li>
         </ul>
       </div>
 
@@ -888,10 +921,22 @@
     document.querySelectorAll(".nav-btn")[5].click();
   }
 
-  function openModal(text){
-    document.getElementById("modal").style.display="flex";
-    document.getElementById("modalText").innerText=text;
-  }
+  function openModal(points){
+
+  document.getElementById("modal").style.display="flex";
+
+  let bulletPoints = points.split("|");
+
+  let html = "<ul style='padding-left:20px; line-height:2; color:#475569;'>";
+
+  bulletPoints.forEach(point => {
+    html += `<li>${point}</li>`;
+  });
+
+  html += "</ul>";
+
+  document.getElementById("modalText").innerHTML = html;
+}
 
   function closeModal(){
     document.getElementById("modal").style.display="none";
